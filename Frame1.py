@@ -246,7 +246,7 @@ class Frame1(wx.Frame):
         user, passwd = self.textCtrlAdmin.GetValue(), self.textCtrlPassword.GetValue()
         
         winos = testOS()
-        if winos == '7':
+        if winos == '7' or winos == '8' :
             cle_registre()
         #TODO
         self.domainpardefaut()
@@ -425,6 +425,7 @@ def testOS():
                         (2, 5, 2): '2003',
                         (2, 6, 0): 'Vista',
                         (2, 6, 1): '7',
+                        (2, 6, 2): '8',
         }
         if ver_format in win_version:
             return  win_version[ver_format]
